@@ -14,6 +14,7 @@
         }
         .container {
             display: flex;
+            flex-direction: column; /* Cambiamos la dirección del contenedor a columna */
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
@@ -22,17 +23,17 @@
             overflow: hidden;
         }
         .left-column {
-            width: 300px;
-            padding-right: 20px;
-            padding-left: 20px;
+            width: 100%; /* Cambiamos el ancho al 100% */
             background-color: rgba(107, 142, 35, 0.8); /* Verde oliva */
             border-radius: 8px;
             color: #fff;
+            order: 2; /* Cambiamos el orden a 2 */
+            margin-bottom: 20px; /* Añadimos un espacio inferior */
         }
         .right-column {
             flex: 1;
-            padding-left: 20px;
             background-color: #fff;
+            order: 1; /* Cambiamos el orden a 1 */
         }
         .info {
             margin-bottom: 20px;
@@ -83,6 +84,29 @@
             font-size: 32px; /* Tamaño de letra grande */
             font-weight: bold; /* Tipo de letra gruesa */
             margin-bottom: 20px;
+        }
+
+        /* Media queries para hacer la página responsive */
+        @media only screen and (min-width: 768px) {
+            .container {
+                flex-direction:row; /* Cambiamos la dirección del contenedor a fila */
+            }
+            .left-column {
+                width: 300px; /* Restauramos el ancho original */
+                order: 1; /* Cambiamos el orden a 1 */
+                margin-right: 20px; /* Añadimos un espacio derecho */
+                margin-bottom: 0; /* Quitamos el espacio inferior */
+            }
+            .right-column {
+                order: 2; /* Cambiamos el orden a 2 */
+            }
+            
+        }
+
+        @media only screen and (max-width: 767px) {
+            .container {
+                flex-direction: column-reverse; /* Cambiamos el orden a columna inversa */
+            }
         }
     </style>
 </head>
@@ -145,33 +169,32 @@
             <section class="info">
                 <h2>Experiencia Laboral</h2>
                 <h3>Proyectos Destacados</h3>
-    <ul>
-        <li>
-            <strong>Desarrollo de Juegos:</strong> Participé en la creación de varios juegos como parte de proyectos personales y académicos. Esto me permitió mejorar mis habilidades de programación en lenguajes como Python, JavaScript y C++.
-        </li>
-        <br>
-        <li>
-            <strong>Desarrollo de Interfaces Gráficas:</strong> Trabajé en la creación de interfaces gráficas para aplicaciones de escritorio y móviles. Estos proyectos me ayudaron a entender la importancia del diseño de usuario y la usabilidad.
-        </li>
-        <br>
-        <li>
-            <strong>Análisis de Datos:</strong> Realicé proyectos donde tuve que analizar datos provenientes de archivos JSON, lo que me permitió adquirir experiencia en el manejo de datos estructurados y la extracción de información relevante.
-        </li>
-        <br>
-        <li>
-            <strong>Desarrollo Web:</strong> He creado varias páginas web tanto de forma individual como en equipo, utilizando tecnologías como HTML, CSS, JavaScript y frameworks como React y Vue.js.
-        </li>
-        <br>
-        <li>
-            <strong>Manejo de Bases de Datos Local:</strong> Desarrollé aplicaciones con interfaces gráficas que interactúan con bases de datos, lo que me proporcionó experiencia en el diseño, implementación y manipulación de bases de datos relacionales y no relacionales.
-        </li>
-        <br>
-        <li>
-            <strong>Lectura y Manipulación de Archivos:</strong> Trabajé en proyectos donde tuve que leer y procesar datos de archivos de diferentes formatos, lo que me ayudó a desarrollar habilidades en el manejo de archivos y el procesamiento de información.
-        </li>
+                <ul>
+                    <li>
+                        <strong>Desarrollo de Juegos:</strong> Participé en la creación de varios juegos como parte de proyectos personales y académicos. Esto me permitió mejorar mis habilidades de programación en lenguajes como Python, JavaScript y C++.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Desarrollo de Interfaces Gráficas:</strong> Trabajé en la creación de interfaces gráficas para aplicaciones de escritorio y móviles. Estos proyectos me ayudaron a entender la importancia del diseño de usuario y la usabilidad.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Análisis de Datos:</strong> Realicé proyectos donde tuve que analizar datos provenientes de archivos JSON, lo que me permitió adquirir experiencia en el manejo de datos estructurados y la extracción de información relevante.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Desarrollo Web:</strong> He creado varias páginas web tanto de forma individual como en equipo, utilizando tecnologías como HTML, CSS, JavaScript y frameworks como React y Vue.js.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Manejo de Bases de Datos Local:</strong> Desarrollé aplicaciones con interfaces gráficas que interactúan con bases de datos, lo que me proporcionó experiencia en el diseño, implementación y manipulación de bases de datos relacionales y no relacionales.
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Lectura y Manipulación de Archivos:</strong> Trabajé en proyectos donde tuve que leer y procesar datos de archivos de diferentes formatos, lo que me ayudó a desarrollar habilidades en el manejo de archivos y el procesamiento de información.
+                    </li>
 
-    </ul>
-                
+                </ul>
                 <!-- Detalles de tu experiencia laboral aquí -->
                 <div class="skills">
                     <div class="skill">
