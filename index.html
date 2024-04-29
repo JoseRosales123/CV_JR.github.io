@@ -1,9 +1,235 @@
-<html lang ="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Curriculum Vitae</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .left-column {
+            width: 300px;
+            padding-right: 20px;
+            padding-left: 20px;
+            background-color: rgba(107, 142, 35, 0.8); /* Verde oliva */
+            border-radius: 8px;
+            color: #fff;
+        }
+        .right-column {
+            flex: 1;
+            padding-left: 20px;
+            background-color: #fff;
+        }
+        .info {
+            margin-bottom: 20px;
+            text-align: justify;
+            margin-right: 20px;
+            
+        }
+        .info h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #000; /* Líneas intermedias negras */
+            padding-bottom: 1px;
+            margin-right: 10px;
+        }
+        .info p {
+            margin: 5px 0;
+        }
+        .skills {
+            margin-bottom: 20px;
+        }
+        .skills h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #000; /* Líneas intermedias negras */
+            padding-bottom: 10px;
+            margin-right: 10px;
+        }
+        .skill {
+            margin-bottom: 10px;
+        }
+        .skill p {
+            margin-bottom: 2px;
+        }
+        .skill-bar {
+            background-color: #ccc;
+            height: 15px;
+            border-radius: 8px;
+            margin-bottom: 2px;
+            margin-right: 30px;
+        }
+        .skill-level {
+            background-color: #556B2F;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .name {
+            text-align: center;
+            font-size: 32px; /* Tamaño de letra grande */
+            font-weight: bold; /* Tipo de letra gruesa */
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="scroll-to-top-btn" id="scroll-to-top-btn" style="display: none;">
+        <button onclick="scrollToTop()">↑ <i class="fa fa-arrow-up"></i></button>
+    </div>
 
-    <h1>    Hey Yo Listen </h1>
+    <div class="container">
+        <div class="left-column">
+            <br>
+            <img src="C:\Users\jr468\Downloads\Imagen Formal.jpg" alt="Mi Fotografía" style="display: block; margin: 0 auto; width: 200px; height: auto; border-radius: 25%; margin-bottom: 20px;">
+            <div class="name">José Rodrigo Rosales Mirón</div>
+            <div class="info">
+                <h2>Información Personal</h2>
+                <ul>
+                    
+                    <li><p>Correo-Electrónico: jr468997@gmail.com</p></li>
+                    <li><p> Dirreción: Guatemala,Sacatepéquez</p></li>
+                </ul>
+
+                <h2>Dominio de Lenguajes:</h2>
+                <div class="skill">
+                    <p>Español</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>Ingles</p>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <!-- Tus datos personales aquí -->
+            </div>
+        </div>
+        <div class="right-column">
+            <section class="info">
+                <br>
+                <h2>Sobre Mí</h2>
+                <p>Soy un apasionado estudiante a desarrollador con experiencia en HTML,
+                    C++, C# y Python. Me encanta trabajar en equipo y enfrentar nuevos problemas que desafian mis conocimientos
+                    y me empujan a resolver y aprender. Siempre veo el lado positivo de las situaciones y soy muy flexible a la hora
+                    de resolver nuevos retos. Soy muy apasionado con lo que hago y siemppre quiero seguir aprendiendo.</p>
+            </section>
+            
+            <section class="info">
+                <h2>Educación</h2>
+                <p>Desde pequeño crecí en una familia con principios y valores morales bien fundamentados. Recibí mi escolaridad básica 
+                en el Colegio Boston donde me gradue con honores. Aqui fueron mis primeros pasos a la programación y a la tecnología. Fue donde 
+                descrubrí mis gustos y mi vocación. 
+                </p>
+
+                <p>Durante mi tiempo en el colegio, participé activamente en el club de robótica, 
+                donde  en proyectos que ampliaron mi comprensión de la ingeniería y la programación.</p>
+                <!-- Información sobre tu educación aquí -->
+            </section>
+            
+            <section class="info">
+                <h2>Experiencia Laboral</h2>
+                <h3>Proyectos Destacados</h3>
+    <ul>
+        <li>
+            <strong>Desarrollo de Juegos:</strong> Participé en la creación de varios juegos como parte de proyectos personales y académicos. Esto me permitió mejorar mis habilidades de programación en lenguajes como Python, JavaScript y C++.
+        </li>
+        <br>
+        <li>
+            <strong>Desarrollo de Interfaces Gráficas:</strong> Trabajé en la creación de interfaces gráficas para aplicaciones de escritorio y móviles. Estos proyectos me ayudaron a entender la importancia del diseño de usuario y la usabilidad.
+        </li>
+        <br>
+        <li>
+            <strong>Análisis de Datos:</strong> Realicé proyectos donde tuve que analizar datos provenientes de archivos JSON, lo que me permitió adquirir experiencia en el manejo de datos estructurados y la extracción de información relevante.
+        </li>
+        <br>
+        <li>
+            <strong>Desarrollo Web:</strong> He creado varias páginas web tanto de forma individual como en equipo, utilizando tecnologías como HTML, CSS, JavaScript y frameworks como React y Vue.js.
+        </li>
+        <br>
+        <li>
+            <strong>Manejo de Bases de Datos Local:</strong> Desarrollé aplicaciones con interfaces gráficas que interactúan con bases de datos, lo que me proporcionó experiencia en el diseño, implementación y manipulación de bases de datos relacionales y no relacionales.
+        </li>
+        <br>
+        <li>
+            <strong>Lectura y Manipulación de Archivos:</strong> Trabajé en proyectos donde tuve que leer y procesar datos de archivos de diferentes formatos, lo que me ayudó a desarrollar habilidades en el manejo de archivos y el procesamiento de información.
+        </li>
+
+    </ul>
+                
+                <!-- Detalles de tu experiencia laboral aquí -->
+                <div class="skills">
+                    <div class="skill">
+                        <p>HTML</p>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>C#</p>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <p>C++</p>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>Python</p>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <!-- Añade más habilidades según sea necesario -->
+                </div>
+
+                <p>&copy; 2024 José Rodrigo Rosales Mirón</p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Mostrar u ocultar el botón cuando el usuario hace scroll
+        window.onscroll = function() { scrollFunction() };
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scroll-to-top-btn").style.display = "block";
+            } else {
+                document.getElementById("scroll-to-top-btn").style.display = "none";
+            }
+        }
+        
+        // Función para desplazarse al principio de la página con animación suave
+        function scrollToTop() {
+            const scrollToTop = () => {
+                const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+                if (currentPosition > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, currentPosition - currentPosition / 8); // Ajusta la velocidad cambiando el divisor (8) 
+                }
+            };
+            scrollToTop();
+        }
+        </script>
 </body>
 </html>
